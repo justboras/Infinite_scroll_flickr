@@ -1,0 +1,35 @@
+.app {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background-color: #E7E7E9;
+  overflow: auto;
+  justify-content: center;
+  padding: 20px;
+  
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .spinnerContainer {
+    align-self: center;
+    background: transparent;
+  }
+  
+  .spinner {
+    border: 16px solid lightblue;
+    border-top: 16px solid white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

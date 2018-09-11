@@ -1,0 +1,58 @@
+.itemContainer {
+  position: relative;
+  height: 100%;
+  height: calc(30vh - 10px);
+  box-shadow: 3px 3px #D1D3D2;
+  border-radius: 5px;
+  
+  .itemImage {
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .itemHover {
+    overflow: hidden;
+    position: absolute;
+    background-color: rgba(0,0,0,.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    will-change: opacity;
+    transition: opacity .24s ease-out;
+    box-sizing: border-box;
+    color: #fff;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 5px;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .itemTitle {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .itemOwner {
+    font-style: italic;
+  }
+
+  .favouriteButton {
+    padding: 10px 15px;;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+  }
+  
+  hr {
+    width: 100px;
+  }
+}
