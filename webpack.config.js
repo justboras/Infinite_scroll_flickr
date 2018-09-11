@@ -1,5 +1,4 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -9,11 +8,6 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
-  output: {
-    path: path.resolve(__dirname, 'app', 'dist'),
-    filename: 'index_bundle.js',
-    publicPath: '/',
-  },
   module: {
     rules: [
       { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
@@ -29,4 +23,5 @@ module.exports = {
     port: 3002,
   },
   plugins: [HtmlWebpackPluginConfig],
+  mode: 'development',
 };
